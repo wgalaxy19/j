@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>
+    array
+    </title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Add elements to array </legend>
+            <input type="text" id="text1"></input>
+            <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+        </fieldset>
+        <input type="button" id="button2" value="Display" onclick="display_array();"></input>
+        <input type="button" id="button3" value="Sort" onclick="sort();"></input>
+        <input type="button" id="button4" value="Reverse" onclick="rev();"></input>
+        <div id="Display"></div>
+        <div id="Options"></div>
+    </form>
+    <script>
+        var x = 0;
+        var array = Array();
+        function add_element_to_array()
+        {
+            array[x] = document.getElementById("text1").value;
+            alert("Element:"+array[x]+ "added at index " + x);
+            x++;
+            document.getElementById("text1").value = "";
+
+        }
+        function display_array()
+        {
+            document.getElementById("Display").innerHTML = " array:["+array+"]";
+        }
+        function sort()
+        {
+            array.sort()
+            document.getElementById("Display").innerHTML = "Sorted array:["+array+"]";
+        }
+        function rev()
+        {
+            array.reverse()
+            document.getElementById("Display").innerHTML = "Reversed array:["+array+"]";
+        }
+     
+    </script>
+</body>
+</html>
